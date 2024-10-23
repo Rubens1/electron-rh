@@ -1,0 +1,50 @@
+{
+  "name": "akad",
+  "version": "1.0.0",
+  "icon": "./assets/icon.ico",
+  "description": "Sistema de de ponto",
+  "main": "./out/main/index.js",
+  "author": "Akad",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:win": "npm run build && electron-builder --win --config",
+    "build:mac": "npm run build && electron-builder --mac --config",
+    "build:linux": "npm run build && electron-builder --linux --config"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.0",
+    "@electron-toolkit/utils": "^3.0.0",
+    "node-sass": "^9.0.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.4"
+  },
+  "devDependencies": {
+    "@electron-toolkit/eslint-config": "^1.0.2",
+    "@electron-toolkit/eslint-config-prettier": "^2.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^28.1.1",
+    "electron-builder": "^24.9.1",
+    "electron-vite": "^2.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass-embedded": "^1.80.3",
+    "vite": "^5.0.11"
+  },
+  "build": {
+    "directories": {
+      "buildResources": "assets"
+    },
+    "appId": "com.seuapp.id",
+    "files": [
+      "out/**/*"
+    ]
+  }
+}
